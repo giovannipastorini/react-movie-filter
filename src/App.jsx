@@ -45,7 +45,7 @@ function App() {
     {/* Filter by Title */}
       <div>
           <label htmlFor="title">Title</label><br />
-          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search a movie by title" />
+          <input id="title" type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search a movie by title" />
       </div>
 
 
