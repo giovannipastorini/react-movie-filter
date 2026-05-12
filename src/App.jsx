@@ -16,6 +16,11 @@ function App() {
   const [movies, setMovies] = useState(initialMovies)
   const [genere, setGenere]=useState('')
   const [search, setSearch] = useState('')
+  const [newFilm, setNewFilm]= useState({
+    id:undefined,
+    title:'',
+    genre:''
+  })
 
   useEffect(() => {
     console.log(genere);
@@ -39,8 +44,45 @@ function App() {
 
   }, [genere, search])
 
+
+  function handleFormData (e){
+    setNewFilm({
+      ...newFilm,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  function handleAddMovie (e){
+    e.preventdefault();
+  }
+
   return (
     <>
+    
+    {/* Add movie form*/}
+    <form onSubmit={handleAddMovie}>
+      <div>
+          <label htmlFor="title">Title</label><br />
+          <input  id="title" 
+                  type="text"
+                  name="title"
+                  value={newFilm.title} 
+                  onChange={handleFormData} 
+                  placeholder="input the title" />
+      </div>
+      <div>
+          <label htmlFor="title">Genre</label><br />
+          <input  id="genre" 
+                  type="text"
+                  name="genre"
+                  value={newFilm.title} 
+                  onChange={handleFormData} 
+                  placeholder="input the genre" />
+      </div>
+      <div>
+        <button type="submit">Inserisci film</button>
+      </div>
+    </form>
 
     {/* Filter by Title */}
       <div>
