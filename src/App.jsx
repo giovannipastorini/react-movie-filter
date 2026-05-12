@@ -13,21 +13,24 @@ function App() {
   { id: 6, title: 'Pulp Fiction', genre: 'Thriller' },
 ]
 
-//Inception, Il Padrino, Titanic, Batman, Interstellar, Pulp Fiction
+//Fantascienza, Thriller, Romantico, Azione, Fantascienza, Thriller
 
 const [movies, setMovies] = useState(initialMovies)
 
   return (
     <>
 
-    <select>
-      <option value="Inception">Inception</option>
-      <option value="Il Padrino">Il Padrino</option>
-      <option value="Titanic">Titanic</option>
-      <option value="Batman">Batman</option>
-      <option value="Interstellar">Interstellar</option>
-      <option value="Pulp Fiction">Pulp Fiction</option>
-    </select>
+    <div>
+      <select>
+        <option value="Fantascienza">Fantascienza</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Romantico">Romantico</option>
+        <option value="Azione">Azione</option>
+        <option value="Fantascienza">Fantascienza</option>
+        <option value="Thriller">Thriller</option>
+      </select>
+    </div>
+    
     {
       movies.map( movie =>(
         <div key={movie.id}>
