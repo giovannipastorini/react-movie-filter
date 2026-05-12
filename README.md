@@ -1,3 +1,6 @@
+Flusso:
+
+
 esercizio di oggi: React Movie Filter
 repo: react-movie-filter
 
