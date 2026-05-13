@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 
 function App() {
-  
 
   const initialMovies=[
     { id: 1, title: 'Inception', genre: 'Fantascienza' },
